@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8efe9">
+  <title>Uma carta para você</title>
+  <style>
+    :root { color-scheme: light; --ink:#382b35; --rose:#bd6579; --paper:#fffdfb; }
+    * { box-sizing:border-box; }
+    body { min-height:100vh; margin:0; display:grid; place-items:center; padding:28px; color:var(--ink); background:radial-gradient(ellipse at 15% 20%,#f4d9d6 0,transparent 30%),radial-gradient(ellipse at 85% 80%,#ead9e7 0,transparent 34%),#f8efe9; font-family:Georgia,"Times New Roman",serif; }
+    .slide { position:relative; isolation:isolate; width:min(100%,1100px); min-height:min(650px,calc(100vh - 56px)); display:grid; grid-template-columns:.9fr 1.1fr; overflow:hidden; border:1px solid rgba(128,83,102,.12); border-radius:28px; background:var(--paper); box-shadow:0 30px 90px rgba(76,46,62,.16); }
+    .art { position:relative; display:grid; place-items:center; overflow:hidden; min-height:360px; background:linear-gradient(145deg,#edc9ca,#d9bdd2 58%,#c9c6dd); }
+    .art::before,.art::after { content:""; position:absolute; border:1px solid rgba(255,255,255,.45); border-radius:50%; }
+    .art::before { width:390px;height:390px; } .art::after { width:470px;height:470px; }
+    .heart { z-index:1; color:#fff8f5; font-size:clamp(100px,19vw,190px); line-height:1; filter:drop-shadow(0 14px 18px rgba(116,61,84,.2)); animation:float 4s ease-in-out infinite; }
+    .sparkle { position:absolute; color:rgba(255,255,255,.8); font-size:24px; } .s1{top:24%;left:22%}.s2{top:34%;right:20%;font-size:16px}.s3{bottom:23%;left:30%;font-size:14px}
+    .letter { align-self:center; padding:clamp(38px,7vw,82px); }
+    .eyebrow { margin:0 0 20px; color:var(--rose); font:600 11px/1.4 Arial,sans-serif; letter-spacing:.22em; text-transform:uppercase; }
+    h1 { margin:0 0 26px; font-size:clamp(38px,5vw,58px); font-weight:400; line-height:1.04; letter-spacing:-.04em; }
+    .copy { max-width:430px; color:#62545e; font-size:clamp(16px,1.7vw,18px); line-height:1.8; } .copy p{margin:0 0 16px}.signature{margin-top:26px!important;color:var(--ink);font-style:italic}.signature span{color:var(--rose)}
+    @keyframes float { 50% { transform:translateY(-9px) rotate(-3deg); } }
+    @media(max-width:700px) { body{padding:16px}.slide{min-height:auto;grid-template-columns:1fr;border-radius:22px}.art{min-height:230px}.art::before{width:250px;height:250px}.art::after{width:320px;height:320px}.heart{font-size:112px}.letter{padding:34px 30px 40px}h1{margin-bottom:18px} }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after{animation:none!important} }
+  </style>
+</head>
+<body>
+  <main class="slide" aria-labelledby="title">
+    <section class="art" aria-hidden="true"><span class="sparkle s1">✦</span><span class="sparkle s2">✧</span><span class="sparkle s3">✦</span><span class="heart">♡</span></section>
+    <article class="letter">
+      <p class="eyebrow">Com carinho, para você</p>
+      <h1 id="title">Uma coisa<br>que eu queria<br>te dizer</h1>
+      <div class="copy">
+        <p>Tem gente que deixa os dias mais leves só por estar por perto. Você é assim.</p>
+        <p>Gosto do seu jeito, das nossas conversas e de como tudo fica um pouco mais bonito quando você aparece.</p>
+        <p>Não precisava de uma ocasião especial para dizer isso. Só queria que você soubesse. ♡</p>
+        <p class="signature">Com carinho, <span>alguém que gosta de você</span></p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
